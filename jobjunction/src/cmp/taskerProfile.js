@@ -102,7 +102,7 @@ const TaskerProfile = () => {
     if(isEditing){
       const fetchData = async () => {
         try {
-          const response = await fetch(`${baseurl}/updatetasker`,{
+          const response = await fetch(`https://jj-bend.onrender.com/updatetasker`,{
             method:'POST',
             headers:{
               'Content-Type': 'application/json'

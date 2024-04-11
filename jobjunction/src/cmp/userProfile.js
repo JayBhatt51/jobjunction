@@ -90,7 +90,7 @@ const UserProfile = () => {
 
       const fetchData = async () => {
         try {
-          const response = await fetch('http://localhost:4000/updateuser', {
+          const response = await fetch('https://jj-bend.onrender.com/updateuser', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'

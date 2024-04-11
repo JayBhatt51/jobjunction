@@ -8,7 +8,7 @@ const IncomingRequest = () => {
     const taskerId = location.state;
     const [tasks, setTasks] = useState([]);
     const navigate = useNavigate();
-
+    const [isButtonDisabled, setIsButtonDisabled] = useState(false);
     const fetchTasks = async () => {
         try {
             const response = await fetch(`${baseurl}/get-incoming`, {
@@ -36,6 +36,7 @@ const IncomingRequest = () => {
 
     const handleAccept = async (taskId) => {
         try {
+            setIsButtonDisabled(true);
             const response = await fetch(`${baseurl}/give-confirm`, {
                 method: 'POST',
                 headers: {
@@ -94,7 +95,7 @@ const IncomingRequest = () => {
                                 <p><strong>Phone:</strong> {task.userphone}</p>
                                 <p><strong>Price:</strong> {task.taskprice}</p>
                                 <div className="d-flex justify-content-center mt-4">
-                                    <button className="btn btn-success me-2" onClick={() => handleAccept(task._id)}>Accept</button>
+                                    <button className="btn btn-success me-2" onClick={() => handleAccept(task._id)} disabled={isButtonDisabled}>{isButtonDisabled ? 'Processing...' : 'Accept'}</button>
                                     <button className="btn btn-danger" onClick={() => handleCancel(task._id)}>Cancel</button>
                                 </div>
                             </div>
