@@ -1,0 +1,60 @@
+/* EditTaskPopup.css */
+
+.popup-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .popup-header h2 {
+    margin: 0;
+  }
+  
+  .popup-content {
+    margin-bottom: 15px;
+  }
+  
+  .popup-content label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .popup-content input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .popup-actions {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .popup-actions button {
+    padding: 8px 20px;
+    margin-left: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .popup-actions button.cancel {
+    background-color: #ccc;
+  }
+  

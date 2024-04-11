@@ -1,0 +1,1 @@
+export const baseurl = "https://jj-bend.onrender.com"
